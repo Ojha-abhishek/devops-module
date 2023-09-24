@@ -11,5 +11,5 @@ data "azurerm_virtual_network" "vnet" {
 data "azurerm_virtual_machine" "virtualmachine" {
   for_each            = var.vm
   name                = each.value.name
-  resource_group_name = each.value.re
+  resource_group_name = each.value.resource_group_name
 }
